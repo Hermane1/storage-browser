@@ -21,7 +21,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function initializeCart() {
         if (!localStorage.getItem('cart')) {
-            localStorage.setItem('cart', JSON.stringify([]));
+            const initialCart = [
+                {
+                    id: 1681323912259,
+                    name: "Pears",
+                    price: 3
+                },
+                {
+                    id: 1681323954156,
+                    name: "Apples",
+                    price: 2
+                }
+            ];
+            localStorage.setItem('cart', JSON.stringify(initialCart));
         }
     }
 
@@ -36,3 +48,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.log(cart);
     }
 });
+
